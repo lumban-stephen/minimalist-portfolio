@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 
 const Footer = ({ toggleColorMode }) => {
   return (
-    <footer className="flex justify-between items-center p-4 bg-customYellow">
+    <footer className="fixed bottom-0 left-0 right-0 bg-customYellow p-4 flex justify-between items-center">
       <div className="flex space-x-4">
         <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="text-2xl hover:text-blue-500" />

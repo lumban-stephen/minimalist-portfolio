@@ -2,13 +2,14 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-4 bg-customYellow">
+    <nav className="fixed top-0 left-0 right-0 bg-customYellow p-4 flex justify-between items-center">
       <div className="text-xl font-bold">Stephen Lumban</div>
-      <ul className="flex space-x-4">
-        <li><a href="#about" className="hover:text-blue-500">About Me</a></li>
-        <li><a href="#education" className="hover:text-blue-500">Education</a></li>
-        <li><a href="#hireme" className="hover:text-blue-500">Hire Me</a></li>
-      </ul>
+      <div className="space-x-4">
+        <a href="#home" className="hover:text-customBlue">Home</a>
+        <a href="#about" className="hover:text-customBlue">About Me</a>
+        <a href="#education" className="hover:text-customBlue">Education</a>
+        <a href="#hire-me" className="hover:text-customBlue">Hire me</a>
+      </div>
     </nav>
   );
 }

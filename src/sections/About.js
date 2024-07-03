@@ -4,18 +4,18 @@ import nature from '../assets/nature.png'; // Adjust the path based on your actu
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-customYellow p-4 flex flex-col items-center justify-center">
+    <div className="min-h-screen w-screen bg-customYellow p-4 flex flex-col items-center justify-center flex-none">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl">
         {/* First Row */}
         <div className="flex justify-center items-center">
           <img
             src={avatar}
             alt="Stephen"
-            className="w-283 h-385 md:w-48 md:h-48 rounded-full mb-4"
+            class="object-cover h-150 w-100"
           />
         </div>
         <div className="flex justify-center items-center">
-          <p className="text-lg md:text-xl text-center">
+          <p className="text-xl md:text-xxl text-center">
             When I'm not coding, I love connecting with nature through hiking and immersing myself in the tranquility of the outdoors. Music is another passion of mine, providing a perfect balance to my technical pursuits.
           </p>
         </div>
@@ -30,7 +30,6 @@ const About = () => {
           <img
             src={nature}
             alt="Nature"
-            className="w-32 h-32 md:w-48 md:h-48 rounded-full mb-4"
           />
         </div>
       </div>

@@ -1,9 +1,25 @@
-import './App.css';
+import React, { useState } from 'react';
+import Navbar from './components/Navbar';
 import About from './sections/About';
+import Footer from './components/Footer';
+import './App.css';
 
-function App() {
+const App = () => {
+  const [colorMode, setColorMode] = useState('customYellow');
+
+  const toggleColorMode = () => {
+    setColorMode((prevMode) => (prevMode === 'customYellow' ? 'customBlue' : 'customYellow'));
+  };
+
   return (
-    <About></About>
+    <div className={`${colorMode} flex-col`}>
+      <Navbar />
+      <div className="flex overflow-x-auto overflow-y-hidden h-full">
+        <About />
+        {/* Add more sections here if needed */}
+      </div>
+      <Footer toggleColorMode={toggleColorMode} />
+    </div>
   );
 }
 
