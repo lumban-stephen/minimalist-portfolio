@@ -4,14 +4,14 @@ import nature from '../assets/nature.png'; // Adjust the path based on your actu
 
 const About = () => {
   return (
-    <div className="min-h-screen w-screen bg-customYellow p-4 flex flex-col items-center justify-center flex-none">
+    <div className="min-h-screen w-screen bg-customYellow flex items-center justify-center section">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl">
         {/* First Row */}
         <div className="flex justify-center items-center">
           <img
             src={avatar}
             alt="Stephen"
-            class="object-cover h-150 w-100"
+            className="h-48 md:h-60 lg:h-80"
           />
         </div>
         <div className="flex justify-center items-center">
@@ -30,6 +30,7 @@ const About = () => {
           <img
             src={nature}
             alt="Nature"
+            className="h-48 md:h-60 lg:h-80"
           />
         </div>
       </div>

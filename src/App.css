@@ -12,8 +12,28 @@ html, body {
   height: 100%;
   margin: 0;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 .min-h-screen {
   min-height: calc(100vh - 4rem); /* Assuming nav and footer are each 4rem tall */
+}
+
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  width: 200vw; /* Adjust as needed for the number of sections */
+}
+
+.section {
+  min-width: 100vw;
+  height: 100vh;
 }
