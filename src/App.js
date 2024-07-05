@@ -4,6 +4,7 @@ import Home from './sections/Home';
 import About from './sections/About';
 import Education from './sections/Education';
 import Footer from './components/Footer';
+import CTA from './sections/Cta';
 import './App.css';
 
 const App = () => {
@@ -25,6 +26,9 @@ const App = () => {
         </section>
         <section id="education" className="snap-start w-screen">
           <Education />
+        </section>
+        <section id="education" className="snap-start w-screen">
+          <CTA />
         </section>
       </div>
       <Footer toggleColorMode={toggleColorMode} />
