@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaLinkedin, FaGithub, FaFacebook } from 'react-icons/fa';
 
-const CallToAction = () => {
-  const qualities = ["PASSIONATE", "INNOVATIVE", "DEDICATED", "SKILLED"];
+const CTA = () => {
+  const qualities = ["a PASSIONATE", "an INNOVATIVE", "a DEDICATED", "a SKILLED"];
   const [currentQuality, setCurrentQuality] = useState("");
   const [qualityIndex, setQualityIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -18,33 +18,33 @@ const CallToAction = () => {
           setCurrentQuality("");
           setCharIndex(0);
           setQualityIndex((qualityIndex + 1) % qualities.length);
-        }, 1500); // Wait 1.5 seconds before changing to the next word
+        }, 1500);
       }
-    }, 100); // Adjust typing speed here
+    }, 100);
 
     return () => clearInterval(typingInterval);
   }, [qualityIndex, charIndex]);
 
   return (
-    <div className="bg-yellow-200 min-h-screen flex flex-col items-center justify-center text-center p-4">
-      <div className="max-w-2xl">
-        <p className="text-xl mb-4">
-          If you are looking for a <span className="font-bold">{currentQuality}</span>
+    <div className="min-h-screen w-screen flex items-center justify-center bg-customYellow section">
+      <div className="text-center max-w-2xl">
+        <p className="text-2xl md:text-3xl mb-4">
+          Are you looking for <span className="font-bold">{currentQuality}</span>
         </p>
-        <h2 className="text-4xl font-bold mb-6">Software Engineer</h2>
+        <h2 className="text-5xl md:text-7xl font-bold mb-6">Software Engineer</h2>
         
-        <p className="text-lg mb-8">
+        <p className="text-xl md:text-2xl mb-8">
           You've come to the right place. Let's connect!
         </p>
         
         <div className="flex justify-center space-x-6">
-          <a href="#" className="text-3xl hover:text-blue-600"><FaLinkedin /></a>
-          <a href="#" className="text-3xl hover:text-gray-800"><FaGithub /></a>
-          <a href="#" className="text-3xl hover:text-blue-800"><FaFacebook /></a>
+          <a href="#" className="text-4xl hover:text-blue-600 transition-colors duration-300"><FaLinkedin /></a>
+          <a href="#" className="text-4xl hover:text-gray-800 transition-colors duration-300"><FaGithub /></a>
+          <a href="#" className="text-4xl hover:text-blue-800 transition-colors duration-300"><FaFacebook /></a>
         </div>
       </div>
     </div>
   );
 };
 
-export default CallToAction;
+export default CTA;
