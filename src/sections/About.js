@@ -2,7 +2,7 @@ import React from 'react';
 import avatar from '../assets/avatar.png'; // Adjust the path based on your actual file location
 import nature from '../assets/nature.png'; // Adjust the path based on your actual file location
 
-const About = () => {
+const About = ({ colorMode }) => {
   return (
     <div className="min-h-screen w-screen bg-customYellow flex items-center justify-center section">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl">

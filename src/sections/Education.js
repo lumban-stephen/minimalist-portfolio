@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Education = () => {
+const Education = ({ colorMode }) => {
   return (
     <div className="min-h-screen w-screen bg-customYellow flex flex-col items-center justify-center section">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-5xl text-center p-8">

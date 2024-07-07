@@ -27,13 +27,26 @@ html, body {
   scroll-snap-align: start;
 }
 
-.scroll-container {
-  display: flex;
-  flex-direction: row;
-  width: 200vw; /* Adjust as needed for the number of sections */
+/* For Webkit browsers like Chrome and Safari */
+::-webkit-scrollbar {
+  height: 10px;
 }
 
-.section {
-  min-width: 100vw;
-  height: 100vh;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }

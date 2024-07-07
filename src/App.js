@@ -15,25 +15,25 @@ const App = () => {
   };
 
   return (
-    <div className={`${colorMode} h-screen flex flex-col`}>
-      <Navbar />
-      <div className="flex-grow overflow-x-auto">
+    <div className="h-screen flex flex-col">
+      <Navbar colorMode={colorMode} />
+      <div className={`flex-grow overflow-x-auto snap-x snap-mandatory ${colorMode}`}>
         <div className="flex h-full">
-          <section id="home" className="w-screen flex-shrink-0">
-            <Home />
+          <section id="home" className="w-screen flex-shrink-0 snap-start">
+            <Home colorMode={colorMode} />
           </section>
-          <section id="about" className="w-screen flex-shrink-0">
-            <About />
+          <section id="about" className="w-screen flex-shrink-0 snap-start">
+            <About colorMode={colorMode} />
           </section>
-          <section id="education" className="w-screen flex-shrink-0">
-            <Education />
+          <section id="education" className="w-screen flex-shrink-0 snap-start">
+            <Education colorMode={colorMode} />
           </section>
-          <section id="cta" className="w-screen flex-shrink-0">
-            <CTA />
+          <section id="cta" className="w-screen flex-shrink-0 snap-start">
+            <CTA colorMode={colorMode} />
           </section>
         </div>
       </div>
-      <Footer toggleColorMode={toggleColorMode} />
+      <Footer toggleColorMode={toggleColorMode} colorMode={colorMode} />
     </div>
   );
 }
