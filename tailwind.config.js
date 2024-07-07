@@ -12,7 +12,7 @@ module.exports = {
         }
       },
       animation: {
-        fadeIn: 'fadeIn 1s ease-in forwards'
+        fadeIn: 'fadeIn 3s ease-in forwards'
       },
       colors: {
         customYellow: '#FFE799',
